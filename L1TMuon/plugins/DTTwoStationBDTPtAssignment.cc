@@ -7,7 +7,8 @@
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 #include "FWCore/ParameterSet/interface/FileInPath.h"
 
-#include "CommonTools/Utils/interface/TMVAZipReader.h"
+#include "RecoTauTag/RecoTau/interface/TMVAZipReader.h"
+//#include "CommonTools/Utils/interface/TMVAZipReader.h"
 
 #include "DataFormats/MuonDetId/interface/DTChamberId.h"
 
@@ -43,8 +44,8 @@ DTTwoStationBDTPtAssignment( const edm::ParameterSet& ps ):
 					      &_phiB_two[sta2]);
       }
       loadTMVAWeights(_bdt_readers[sta1][sta2].get(), 
-		      _mvanames[sta1][sta2].c_str(),
-		      weightsfile.fullPath().c_str());
+		      _mvanames[sta1][sta2],
+		      weightsfile.fullPath());
     }
   }
   bx_window = ps.getParameter<unsigned>("bx_match_window");  
