@@ -7,8 +7,8 @@
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 #include "FWCore/ParameterSet/interface/FileInPath.h"
 
-#include "RecoTauTag/RecoTau/interface/TMVAZipReader.h"
 //#include "CommonTools/Utils/interface/TMVAZipReader.h"
+#include "RecoTauTag/RecoTau/interface/TMVAZipReader.h"
 
 #include "DataFormats/MuonDetId/interface/DTChamberId.h"
 
@@ -17,7 +17,7 @@
 #include "TMath.h"
 
 using namespace L1TMuon;
-
+using namespace reco::details;
 DTTwoStationBDTPtAssignment::
 DTTwoStationBDTPtAssignment( const edm::ParameterSet& ps ):
   PtAssignmentUnit(ps) {
